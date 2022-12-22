@@ -2,7 +2,10 @@
 module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
-    fontFamily: { heading: ["Merriweather", "serif"] },
+    fontFamily: {
+      heading: ["Merriweather", "serif"],
+      italic: ["EB Garamond", "serif"],
+    },
     extend: {},
   },
   plugins: [],

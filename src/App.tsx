@@ -3,20 +3,27 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Home";
 import Header from "./Header";
 import Products from "./Products";
-import Categories from "./Categories";
+import Contact from "./Contact";
 import CategorisedProducts from "./CategorisedProducts";
+import Search from "./Search";
 
 function App() {
-  const [menData, setMenData] = useState();
+  const [displaySearchResults, setDisplaySearchResults] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
 
   return (
     <div>
-      <Header />
+      <Header
+        setDisplaySearchResults={setDisplaySearchResults}
+        setSearchInput={setSearchInput}
+        searchInput={searchInput}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/categories/:cat" element={<CategorisedProducts />} />
-        <Route path="/contact" element={<Home />} />
+        <Route path="/search" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
