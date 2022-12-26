@@ -29,7 +29,7 @@ const Header = ({
 
   return (
     <div className="h-[60px] w-full shadow-xl backdrop-blur-md bg-[rgba(255,255,255,0.5)] flex items-center justify-start md:justify-around px-10 fixed">
-      <span className=" text-2xl md:text-3xl font-normal md:font-bold">
+      <span className=" text-2xl font-heading md:text-3xl font-normal md:font-bold">
         Shop <span className="text-red-500">Here</span>
       </span>
       <div className="hidden md:flex md:gap-9 md:text-xl md:font-bold">
