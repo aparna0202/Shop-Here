@@ -5,7 +5,6 @@ import Header from "./Header";
 import Products from "./Products";
 import Contact from "./Contact";
 import CategorisedProducts from "./CategorisedProducts";
-import Search from "./Search";
 
 function App() {
   const [displaySearchResults, setDisplaySearchResults] = useState(false);

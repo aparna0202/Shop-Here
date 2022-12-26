@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
-type Props = {};
 
-const Products = (props: Props) => {
+const Products = () => {
   const jwelleryApi = `https://fakestoreapi.com/products/category/jewelery?limit=3`;
   const menClothingApi = `https://fakestoreapi.com/products/category/men's clothing?limit=3`;
   const womenClothingApi = `https://fakestoreapi.com/products/category/women's clothing?limit=3`;

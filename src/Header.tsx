@@ -18,7 +18,7 @@ const Header = ({
   const [searchClicked, setSearchClicked] = useState(false);
   const navigate = useNavigate();
 
-  const search = (e) => {
+  const search = (e: any) => {
     if (e.keyCode === 13) {
       setDisplaySearchResults(true);
       navigate(`/categories/${searchInput}`);
@@ -76,7 +76,7 @@ const Header = ({
           <input
             type="text"
             placeholder="Enter the Category"
-            className="border border-black text-sm font-thin px-4 py-1"
+            className="border border-black text-sm font-thin px-4 py-1 focus: outline-none text-black"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             onKeyDown={(e) => search(e)}

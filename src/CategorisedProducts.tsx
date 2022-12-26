@@ -7,8 +7,6 @@ const CategorisedProducts = () => {
   const [data, setData] = useState([]);
 
   const api = `https://fakestoreapi.com/products/category/${cat}`;
-  console.log(cat);
-  console.log(api);
 
   useEffect(() => {
     fetch(api)

@@ -1,4 +1,10 @@
-const ProductCard = ({ imageLink, title, price }) => {
+type Props = {
+  imageLink: string;
+  title: string;
+  price: string;
+};
+
+const ProductCard = ({ imageLink, title, price }: Props) => {
   return (
     <div className="bg-[#d5d8d5] md:w-[300px] md:h-[300px] text-sm flex flex-col items-center justify-center border rounded-lg shadow-2xl gap-2">
       <img
