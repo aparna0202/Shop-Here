@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 
+export type Item = {
+  image: string;
+  title: string;
+  price: string;
+};
+
 const Products = () => {
   const jwelleryApi = `https://fakestoreapi.com/products/category/jewelery?limit=3`;
   const menClothingApi = `https://fakestoreapi.com/products/category/men's clothing?limit=3`;
@@ -37,7 +43,7 @@ const Products = () => {
 
       <div className="flex gap-5 md:gap-10  h-[200px] w-[400px] md:w-[900px] md:h-[300px] ">
         {products[0]
-          ? products[0].map((item) => (
+          ? products[0].map((item: Item) => (
               <ProductCard
                 imageLink={item.image}
                 title={item.title.slice(0, 20)}
@@ -48,7 +54,7 @@ const Products = () => {
       </div>
       <div className="flex gap-5 md:gap-10 h-[200px] w-[400px] md:w-[900px] md:h-[300px]">
         {products[1]
-          ? products[1].map((item) => (
+          ? products[1].map((item: Item) => (
               <ProductCard
                 imageLink={item.image}
                 title={item.title.slice(0, 20)}
@@ -59,7 +65,7 @@ const Products = () => {
       </div>
       <div className="flex gap-5 md:gap-10 h-[200px] w-[400px] md:w-[900px] md:h-[300px]">
         {products[2]
-          ? products[2].map((item) => (
+          ? products[2].map((item: Item) => (
               <ProductCard
                 imageLink={item.image}
                 title={item.title.slice(0, 20)}
@@ -70,7 +76,7 @@ const Products = () => {
       </div>
       <div className="flex gap-5 md:gap-10 h-[200px] w-[400px] md:w-[900px] md:h-[300px]">
         {products[3]
-          ? products[3].map((item) => (
+          ? products[3].map((item: Item) => (
               <ProductCard
                 imageLink={item.image}
                 title={item.title.slice(0, 20)}

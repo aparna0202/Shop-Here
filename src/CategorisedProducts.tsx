@@ -1,6 +1,7 @@
 import ProductCard from "./ProductCard";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Item } from "./Products";
 
 const CategorisedProducts = () => {
   const { cat } = useParams();
@@ -17,11 +18,11 @@ const CategorisedProducts = () => {
   return (
     <div className="pt-[100px] flex flex-col items-center justify-center gap-10">
       <h1 className="text-3xl font-bold font-heading">
-        {cat[0].toUpperCase() + cat?.substring(1)}
+        {cat ? cat[0].toUpperCase() + cat?.substring(1) : ""}
       </h1>
       <div className="grid grid-cols-2 gap-10">
         {data
-          ? data.map((item) => (
+          ? data.map((item: Item) => (
               <ProductCard
                 imageLink={item.image}
                 title={item.title.slice(0, 20)}
