@@ -29,7 +29,7 @@ const Home = (props: Props) => {
           </Link>
         </div>
         <img
-          src="../public/assets/rk_day_2_0841.webp"
+          src="../assets/rk_day_2_0841.webp"
           alt=""
           className="h-[100%] pt-5"
         />

@@ -33,7 +33,7 @@ const Products = () => {
       .then((data) => setProducts((prevArray) => [data, ...prevArray]));
   }, []);
   return (
-    <div className="pt-[100px]  flex flex-col gap-[50px] md:items-center justify-center">
+    <div className="pt-[100px]  flex flex-col gap-[50px] items-center justify-center">
       <div className="flex flex-col items-center">
         <h1 className="text-3xl md:text-5xl font-bold font-heading">
           Our <span className="text-red-600">Products</span>
@@ -41,7 +41,7 @@ const Products = () => {
         <div className="h-1 w-[40px] md:w-[60px] bg-red-500 "></div>
       </div>
 
-      <div className="flex gap-5 md:gap-10  h-[200px] w-[400px] md:w-[900px] md:h-[300px] ">
+      <div className="flex md:flex-row flex-col gap-5 md:gap-10 h-[500px] w-[200px] md:w-[900px] md:h-[300px] ">
         {products[0]
           ? products[0].map((item: Item) => (
               <ProductCard
@@ -52,7 +52,7 @@ const Products = () => {
             ))
           : ""}
       </div>
-      <div className="flex gap-5 md:gap-10 h-[200px] w-[400px] md:w-[900px] md:h-[300px]">
+      <div className="flex md:flex-row flex-col  gap-5 md:gap-10 h-[500px] w-[200px] md:w-[900px] md:h-[300px]">
         {products[1]
           ? products[1].map((item: Item) => (
               <ProductCard
@@ -63,7 +63,7 @@ const Products = () => {
             ))
           : ""}
       </div>
-      <div className="flex gap-5 md:gap-10 h-[200px] w-[400px] md:w-[900px] md:h-[300px]">
+      <div className="flex md:flex-row flex-col gap-5 md:gap-10 h-[500px] w-[200px] md:w-[900px] md:h-[300px]">
         {products[2]
           ? products[2].map((item: Item) => (
               <ProductCard
@@ -74,7 +74,7 @@ const Products = () => {
             ))
           : ""}
       </div>
-      <div className="flex gap-5 md:gap-10 h-[200px] w-[400px] md:w-[900px] md:h-[300px]">
+      <div className="flex md:flex-row flex-col gap-5 md:gap-10 h-[500px] w-[200px] md:w-[900px] md:h-[300px]">
         {products[3]
           ? products[3].map((item: Item) => (
               <ProductCard
